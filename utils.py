@@ -1,11 +1,16 @@
 def fact(n):
+	if n<0:					#si n est négatif, on obtient une valueerror
+		raise ValueError	#cette condition d'erreur doit etre définie avant le return sinon ilisible
+	résultat=1
+	for i in range(1,n+1):	#on crée une boucle multipliant les résultat compris entre 1(compris) et n+1(non compris)
+		résultat*=i
+	return résultat			#on ressort à la sortie la valeur du résultat
+		
 	"""Computes the factorial of a natural number.
-	
 	Pre: -
 	Post: Returns the factorial of 'n'.
 	Throws: ValueError if n < 0
 	"""
-	pass
 
 def roots(a, b, c):
 	"""Computes the roots of the ax^2 + bx + x = 0 polynomial.
